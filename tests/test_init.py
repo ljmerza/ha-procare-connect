@@ -124,7 +124,7 @@ async def test_rate_limit_schedules_retry(
     """After a 429 the next poll waits for retry_after instead of the normal interval."""
     coordinator = setup_entry.runtime_data
     procare.get_kids.side_effect = ProcareRateLimitError(1800)
-    local_time.tick(timedelta(minutes=15))
+    local_time.tick(timedelta(minutes=60))
     async_fire_time_changed(hass)
     await hass.async_block_till_done()
     assert not coordinator.last_update_success
@@ -149,9 +149,9 @@ async def test_polls_on_interval(
     procare: FakeProcare,
     local_time: FrozenDateTimeFactory,
 ) -> None:
-    """Polling runs every 15 minutes by default, at any hour."""
+    """Polling runs every 60 minutes by default, at any hour."""
     calls = procare.get_kids.call_count
-    local_time.tick(timedelta(minutes=15))
+    local_time.tick(timedelta(minutes=60))
     async_fire_time_changed(hass)
     await hass.async_block_till_done()
     assert procare.get_kids.call_count == calls + 1

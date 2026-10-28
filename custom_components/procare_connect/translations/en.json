@@ -44,7 +44,7 @@
           "scan_interval": "Polling interval"
         },
         "data_description": {
-          "scan_interval": "Minutes between checks for new activities (5 to 60)."
+          "scan_interval": "Minutes between checks for new activities (15 to 180)."
         }
       }
     }

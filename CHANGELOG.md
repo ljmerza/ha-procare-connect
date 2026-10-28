@@ -7,7 +7,7 @@ Notable changes to Procare Connect. Versions follow semantic versioning, and the
 First version.
 
 ### Added
-- UI setup with the Procare parent email and password, reauth when the password stops working, and a polling interval option (5 to 60 minutes, 15 by default).
+- UI setup with the Procare parent email and password, reauth when the password stops working, and a polling interval option (15 to 180 minutes, 60 by default).
 - Per child daily counters for bottles, bottle ounces, diapers (wet, BM), potty (pee, BM, tried), meals, naps and nap minutes, all resetting at local midnight.
 - Last bottle, bottle ounces, diaper, potty, meal, nap end, sign-in, sign-out and activity times.
 - An `at_daycare` presence sensor.

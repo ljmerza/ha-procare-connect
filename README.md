@@ -12,6 +12,9 @@ It reads activity data only. Photos and videos aren't downloaded or exposed at a
 > [!IMPORTANT]
 > This is an unofficial integration and isn't affiliated with or endorsed by Procare Solutions. It talks to the same private web API the Procare parent portal uses, which isn't documented and can change or break at any time. It only reads data your own parent account can already see.
 
+> [!WARNING]
+> Procare's [Terms and Conditions](https://www.procaresoftware.com/terms-of-use/procare-solutions-terms-of-use/) (updated June 2026, section 6.1) don't allow extracting data from their services with automated tools without Procare's written consent. This integration does that for your own account, so using it is your call and your risk. Procare can suspend or close an account that breaks section 6.1 without warning. It polls once an hour by default and never more than every 15 minutes to stay light on Procare's servers.
+
 ## Install
 
 ### HACS
@@ -39,7 +42,7 @@ If your account belongs to more than one school, only the default school is read
 
 ## Options
 
-**Polling interval** sets how often Procare is checked for new activities, 5 to 60 minutes (15 by default). It polls around the clock. If Procare answers with a rate limit the integration backs off on its own, up to 30 minutes, and goes back to the normal interval once a poll works again.
+**Polling interval** sets how often Procare is checked for new activities, 15 to 180 minutes (60 by default). It polls around the clock. If Procare answers with a rate limit the integration backs off on its own, up to 30 minutes, and goes back to the normal interval once a poll works again.
 
 ## Entities
 

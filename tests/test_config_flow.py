@@ -129,7 +129,7 @@ async def test_reauth_wrong_account(
 
 async def test_options(hass: HomeAssistant, setup_entry: MockConfigEntry) -> None:
     """Changing the interval reloads the entry with the new interval."""
-    assert setup_entry.runtime_data.update_interval.total_seconds() == 15 * 60
+    assert setup_entry.runtime_data.update_interval.total_seconds() == 60 * 60
     result = await hass.config_entries.options.async_init(setup_entry.entry_id)
     assert result["type"] is FlowResultType.FORM
     result = await hass.config_entries.options.async_configure(

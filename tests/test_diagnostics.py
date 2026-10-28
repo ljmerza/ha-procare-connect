@@ -16,7 +16,7 @@ async def test_diagnostics(hass: HomeAssistant, setup_entry: MockConfigEntry) ->
     """Shape and counts are there; nothing that identifies anyone is."""
     diag = await async_get_config_entry_diagnostics(hass, setup_entry)
     assert diag["entry"]["data"] == {"email": "**REDACTED**", "password": "**REDACTED**"}
-    assert diag["entry"]["scan_interval_minutes"] == 15
+    assert diag["entry"]["scan_interval_minutes"] == 60
     assert diag["coordinator"]["last_update_success"] is True
     assert diag["coordinator"]["children"] == 2
     alex = diag["children"][0]

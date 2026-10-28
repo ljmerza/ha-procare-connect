@@ -9,9 +9,10 @@ DOMAIN: Final = "procare_connect"
 AUTH_URL: Final = "https://online-auth.procareconnect.com/sessions/"
 
 CONF_SCAN_INTERVAL: Final = "scan_interval"
-DEFAULT_SCAN_INTERVAL: Final = 15  # minutes
-MIN_SCAN_INTERVAL: Final = 5
-MAX_SCAN_INTERVAL: Final = 60
+# Hourly by default and never faster than 15 minutes: Procare's terms restrict automated access (README).
+DEFAULT_SCAN_INTERVAL: Final = 60  # minutes
+MIN_SCAN_INTERVAL: Final = 15
+MAX_SCAN_INTERVAL: Final = 180
 
 # Procare answers bursts with 429. Every request waits at least this long after the last one.
 REQUEST_GAP: Final = 1.0  # seconds
