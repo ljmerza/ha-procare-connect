@@ -1,0 +1,16 @@
+{
+  "auth_token": "test-token-1",
+  "user": {
+    "id": "00000000-0000-4000-8000-000000000090"
+  },
+  "sites": [
+    {
+      "base_url": "https://api-other.example.procareconnect.invalid",
+      "is_default": false
+    },
+    {
+      "base_url": "https://api-school.example.procareconnect.invalid",
+      "is_default": true
+    }
+  ]
+}

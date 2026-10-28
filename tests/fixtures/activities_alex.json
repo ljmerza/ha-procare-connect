@@ -1,0 +1,197 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-000000000101",
+    "activity_type": "sign_in_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T07:45:00.000-05:00",
+    "activiable_type": "SignInOutActivity",
+    "activiable": {
+      "id": "00000000-0000-4000-8000-000000000201",
+      "section": {
+        "id": "00000000-0000-4000-8000-000000000080",
+        "name": "Classroom A"
+      },
+      "sign_in_time": "2026-01-15T07:44:00.000-05:00",
+      "sign_out_time": null
+    },
+    "data": {},
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000102",
+    "activity_type": "bottle_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T08:30:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "amount": "5",
+      "bottle_consumed": "4",
+      "bottle_type": "Breast Milk",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000103",
+    "activity_type": "bathroom_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T09:00:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "type": "Diaper",
+      "sub_type": "Wet",
+      "diaper_cream": false,
+      "diaper_size": "",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000104",
+    "activity_type": "bathroom_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T10:15:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "type": "Diaper",
+      "sub_type": "BM & Wet",
+      "diaper_cream": true,
+      "diaper_size": "",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000105",
+    "activity_type": "meal_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T11:00:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "type": "Lunch",
+      "desc": "Pasta and peas",
+      "quantity": "Most",
+      "item": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000106",
+    "activity_type": "nap_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T12:00:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "start_time": "2026-01-15T12:00:00.000-05:00",
+      "end_time": "2026-01-15T13:30:00.000-05:00",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000107",
+    "activity_type": "bottle_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T14:00:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "amount": "6",
+      "bottle_consumed": "",
+      "bottle_type": "",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000108",
+    "activity_type": "photo_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T14:30:00.000-05:00",
+    "activiable_type": "Photo",
+    "activiable": {
+      "id": "00000000-0000-4000-8000-000000000301",
+      "caption": "Example caption",
+      "is_video": false,
+      "main_url": "https://media.example.procareconnect.invalid/photo.jpg",
+      "date": "2026-01-15T14:30:00.000-05:00"
+    },
+    "data": {},
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000109",
+    "activity_type": "learning_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T15:00:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {},
+    "comment": "Played with blocks during circle time.",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000110",
+    "activity_type": "bathroom_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T15:30:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "type": "Potty",
+      "sub_type": "Pee",
+      "diaper_cream": false,
+      "diaper_size": "",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000111",
+    "activity_type": "bathroom_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T15:45:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "type": "Potty",
+      "sub_type": "Tried",
+      "diaper_cream": false,
+      "diaper_size": "",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000112",
+    "activity_type": "video_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T15:50:00.000-05:00",
+    "activiable_type": "Photo",
+    "activiable": {
+      "id": "00000000-0000-4000-8000-000000000302",
+      "caption": "",
+      "is_video": true,
+      "video_file_url": "https://media.example.procareconnect.invalid/clip.mp4",
+      "date": "2026-01-15T15:50:00.000-05:00"
+    },
+    "data": {},
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  }
+]

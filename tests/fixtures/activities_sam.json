@@ -1,0 +1,85 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-000000000151",
+    "activity_type": "sign_in_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T08:00:00.000-05:00",
+    "activiable_type": "SignInOutActivity",
+    "activiable": {
+      "id": "00000000-0000-4000-8000-000000000251",
+      "section": {
+        "id": "00000000-0000-4000-8000-000000000080",
+        "name": "Classroom A"
+      },
+      "sign_in_time": "2026-01-15T08:00:00.000-05:00",
+      "sign_out_time": "2026-01-15T15:00:00.000-05:00"
+    },
+    "data": {},
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000152",
+    "activity_type": "bathroom_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T09:30:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "type": "Potty",
+      "sub_type": "BM",
+      "diaper_cream": false,
+      "diaper_size": "",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000153",
+    "activity_type": "nap_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T12:30:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "start_time": "2026-01-15T12:30:00.000-05:00",
+      "end_time": "",
+      "desc": ""
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000154",
+    "activity_type": "note_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T13:00:00.000-05:00",
+    "activiable_type": null,
+    "activiable": null,
+    "data": {
+      "desc": "Bring extra clothes tomorrow."
+    },
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000155",
+    "activity_type": "sign_out_activity",
+    "activity_date": "2026-01-15",
+    "activity_time": "2026-01-15T15:00:00.000-05:00",
+    "activiable_type": "SignInOutActivity",
+    "activiable": {
+      "id": "00000000-0000-4000-8000-000000000251",
+      "section": {
+        "id": "00000000-0000-4000-8000-000000000080",
+        "name": "Classroom A"
+      },
+      "sign_in_time": "2026-01-15T08:00:00.000-05:00",
+      "sign_out_time": "2026-01-15T15:00:00.000-05:00"
+    },
+    "data": {},
+    "comment": "",
+    "staff_present_name": "Teacher One"
+  }
+]
