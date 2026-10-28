@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.venv-*/
+dist/
+
+# Private: real API captures, credentials and local scrubber terms. Never commit these.
+captures/
+.env
+.dev-config/
+.scrub-denylist

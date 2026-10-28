@@ -1,0 +1,4 @@
+# CI test dependencies (latest Home Assistant the suite is checked against).
+# pytest-homeassistant-custom-component 0.13.372 pins homeassistant==2026.10.1,
+# pytest, pytest-asyncio and syrupy itself; don't pin those separately.
+pytest-homeassistant-custom-component==0.13.372
