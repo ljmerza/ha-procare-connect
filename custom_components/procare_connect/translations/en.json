@@ -1,0 +1,160 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Procare Connect",
+        "description": "Sign in with the email and password you use for the Procare parent app or website.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        },
+        "data_description": {
+          "email": "The parent account's email.",
+          "password": "The parent account's password."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in again",
+        "description": "Procare rejected the saved login for {email}. Enter the current password.",
+        "data": {
+          "password": "Password"
+        },
+        "data_description": {
+          "password": "The parent account's password."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Procare rejected the email or password.",
+      "cannot_connect": "Couldn't reach Procare. Try again in a few minutes.",
+      "no_kids": "This Procare account has no children on it.",
+      "unknown": "Unexpected error. Check the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This Procare account is already set up.",
+      "reauth_successful": "Signed in again.",
+      "wrong_account": "That login belongs to a different Procare account."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Procare Connect options",
+        "data": {
+          "scan_interval": "Polling interval"
+        },
+        "data_description": {
+          "scan_interval": "Minutes between checks for new activities (5 to 60)."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "at_daycare": {
+        "name": "At daycare"
+      }
+    },
+    "event": {
+      "activity": {
+        "name": "Activity",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "bottle": "Bottle",
+              "diaper": "Diaper",
+              "potty": "Potty",
+              "nap": "Nap",
+              "nap_end": "Nap ended",
+              "sign_in": "Sign-in",
+              "sign_out": "Sign-out",
+              "meal": "Meal",
+              "learning": "Learning",
+              "mood": "Mood",
+              "medication": "Medication",
+              "incident": "Incident",
+              "note": "Note",
+              "other": "Other"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "bottles_today": {
+        "name": "Bottles today"
+      },
+      "bottle_oz_today": {
+        "name": "Bottle oz today"
+      },
+      "diapers_today": {
+        "name": "Diapers today"
+      },
+      "wet_diapers_today": {
+        "name": "Wet diapers today"
+      },
+      "bm_diapers_today": {
+        "name": "BM diapers today"
+      },
+      "potty_today": {
+        "name": "Potty today"
+      },
+      "potty_pee_today": {
+        "name": "Potty pee today"
+      },
+      "potty_bm_today": {
+        "name": "Potty BM today"
+      },
+      "potty_tried_today": {
+        "name": "Potty tried today"
+      },
+      "meals_today": {
+        "name": "Meals today"
+      },
+      "naps_today": {
+        "name": "Naps today"
+      },
+      "nap_minutes_today": {
+        "name": "Nap minutes today"
+      },
+      "last_bottle": {
+        "name": "Last bottle"
+      },
+      "last_bottle_oz": {
+        "name": "Last bottle oz"
+      },
+      "last_diaper": {
+        "name": "Last diaper"
+      },
+      "last_potty": {
+        "name": "Last potty"
+      },
+      "last_meal": {
+        "name": "Last meal",
+        "state_attributes": {
+          "meal_type": {
+            "name": "Meal type"
+          },
+          "desc": {
+            "name": "Description"
+          },
+          "quantity": {
+            "name": "Quantity"
+          }
+        }
+      },
+      "last_nap_end": {
+        "name": "Last nap ended"
+      },
+      "sign_in_time": {
+        "name": "Sign-in time"
+      },
+      "sign_out_time": {
+        "name": "Sign-out time"
+      },
+      "last_activity": {
+        "name": "Last activity"
+      }
+    }
+  }
+}

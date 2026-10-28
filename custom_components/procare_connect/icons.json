@@ -1,0 +1,102 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "at_daycare": {
+        "default": "mdi:home-outline",
+        "state": {
+          "on": "mdi:school"
+        }
+      }
+    },
+    "event": {
+      "activity": {
+        "default": "mdi:human-child",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "bottle": "mdi:baby-bottle",
+              "diaper": "mdi:human-baby-changing-table",
+              "potty": "mdi:toilet",
+              "nap": "mdi:sleep",
+              "nap_end": "mdi:sleep-off",
+              "sign_in": "mdi:login",
+              "sign_out": "mdi:logout",
+              "meal": "mdi:food-apple",
+              "learning": "mdi:book-open-variant",
+              "mood": "mdi:emoticon-outline",
+              "medication": "mdi:medical-bag",
+              "incident": "mdi:bandage",
+              "note": "mdi:note-text-outline",
+              "other": "mdi:information-outline"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "bottles_today": {
+        "default": "mdi:baby-bottle"
+      },
+      "bottle_oz_today": {
+        "default": "mdi:baby-bottle-outline"
+      },
+      "diapers_today": {
+        "default": "mdi:human-baby-changing-table"
+      },
+      "wet_diapers_today": {
+        "default": "mdi:water"
+      },
+      "bm_diapers_today": {
+        "default": "mdi:emoticon-poop"
+      },
+      "potty_today": {
+        "default": "mdi:toilet"
+      },
+      "potty_pee_today": {
+        "default": "mdi:water"
+      },
+      "potty_bm_today": {
+        "default": "mdi:emoticon-poop"
+      },
+      "potty_tried_today": {
+        "default": "mdi:toilet"
+      },
+      "meals_today": {
+        "default": "mdi:food-apple"
+      },
+      "naps_today": {
+        "default": "mdi:sleep"
+      },
+      "nap_minutes_today": {
+        "default": "mdi:sleep"
+      },
+      "last_bottle": {
+        "default": "mdi:baby-bottle"
+      },
+      "last_bottle_oz": {
+        "default": "mdi:baby-bottle-outline"
+      },
+      "last_diaper": {
+        "default": "mdi:human-baby-changing-table"
+      },
+      "last_potty": {
+        "default": "mdi:toilet"
+      },
+      "last_meal": {
+        "default": "mdi:food-apple"
+      },
+      "last_nap_end": {
+        "default": "mdi:sleep-off"
+      },
+      "sign_in_time": {
+        "default": "mdi:login"
+      },
+      "sign_out_time": {
+        "default": "mdi:logout"
+      },
+      "last_activity": {
+        "default": "mdi:clock-outline"
+      }
+    }
+  }
+}
