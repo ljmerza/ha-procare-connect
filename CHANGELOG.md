@@ -2,7 +2,7 @@
 
 Notable changes to Procare Connect. Versions follow semantic versioning, and the release workflow sets `manifest.json`'s version from the release tag.
 
-## [0.1.0] (unreleased)
+## [0.1.0] - 2026-10-28
 
 First version.
 
