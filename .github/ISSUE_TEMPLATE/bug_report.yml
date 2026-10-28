@@ -1,0 +1,42 @@
+name: Bug report
+description: Something in Procare Connect doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please download diagnostics first: **Settings → Devices & services → Procare Connect → ⋮ → Download diagnostics**. They hold counts and field names only, no names or activity text.
+
+        Don't paste raw Procare responses, your children's names, your school's name or web address, or staff names into this issue: it's public.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened
+      description: What you expected, what happened instead, and when (date/time).
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      placeholder: "2026.10.1"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Procare Connect version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Drag the downloaded diagnostics file here.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Lines mentioning `procare_connect` from **Settings → System → Logs**.
+      render: text

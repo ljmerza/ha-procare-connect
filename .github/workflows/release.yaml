@@ -1,0 +1,82 @@
+name: Release
+
+# Push a tag like v0.2.0 to release. The tests run, the zip is built with the
+# tag's version written into manifest.json, and the GitHub release is created
+# with the zip attached.
+on:
+  push:
+    tags: ["v*"]
+
+# Never cancel a release mid-publish.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Pytest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: ljmerza/misc-actions/actions/python-test@v2
+        with:
+          python-version: "3.14"
+          requirements-file: requirements_test.txt
+          prerelease: allow
+
+  build:
+    name: Build release zip
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set integration version from the tag
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if ! [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+([.-][0-9A-Za-z.]+)?$ ]]; then
+            echo "::error::Tag '$GITHUB_REF_NAME' is not a version like v0.2.0"
+            exit 1
+          fi
+          jq --arg v "$version" '.version = $v' \
+             custom_components/procare_connect/manifest.json > manifest.tmp
+          mv manifest.tmp custom_components/procare_connect/manifest.json
+
+      # hacs.json sets zip_release + filename: HACS downloads this asset and
+      # extracts it into custom_components/procare_connect/, so the zip holds
+      # the integration's files at its root.
+      - name: Build procare_connect.zip
+        run: |
+          mkdir -p dist
+          cd custom_components/procare_connect
+          zip -r ../../dist/procare_connect.zip . -x '*__pycache__*' '*.pyc'
+
+      - name: Upload the zip
+        uses: actions/upload-artifact@v7
+        with:
+          name: procare-connect-zip
+          path: dist/procare_connect.zip
+          if-no-files-found: error
+
+  github-release:
+    name: GitHub release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # github-release passes --verify-tag, which shells out to git.
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: ljmerza/misc-actions/actions/github-release@v2
+        with:
+          tag: ${{ github.ref_name }}
+          title: Procare Connect ${{ github.ref_name }}
+          artifact-name: procare-connect-zip
+          artifact-path: dist
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,53 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    name: Pytest (${{ matrix.ha }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Oldest supported Home Assistant (hacs.json) and the latest the suite is pinned to.
+          - ha: "2026.3"
+            requirements: requirements_test_min.txt
+          - ha: "2026.10"
+            requirements: requirements_test.txt
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: ljmerza/misc-actions/actions/python-test@v2
+        with:
+          python-version: "3.14"
+          requirements-file: ${{ matrix.requirements }}
+          prerelease: allow
+
+  lint:
+    name: Ruff
+    runs-on: ubuntu-latest
+    # Kept as a local job because misc-actions' ruff-lint needs a uv.lock and
+    # also runs `ruff format --check`.
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install ruff
+        run: pip install ruff==0.15.10
+      - name: Ruff check
+        run: ruff check custom_components tests script
